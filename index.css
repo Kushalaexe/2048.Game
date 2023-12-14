@@ -1,0 +1,59 @@
+body{
+    font-family: 'Montagu Slab', serif;
+    background-color: #435585;
+}
+
+h1{
+    font-family: 'Holtwood One SC', serif;
+    margin-bottom: -30px;
+    font-size: 90px;
+    margin-top: -20px;
+}
+h2{
+    font-size: 30px;
+}
+.head{
+    text-align: center;
+    font-size: 30px;
+}
+ul {
+    list-style-type:none;
+    font-size: 20px;
+    margin: 0 100px 0 100px;
+    
+}
+ul ::before{
+    content: "\2192 \0020";
+}
+.material-symbols-outlined {
+color:#435585 ;
+}
+
+.button{
+    margin-top: 60px ;
+    position: relative;
+    top: 0%;
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    width: 200px;
+    background: #F1EEE9;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 3px rgba(0, 0, 0, .1);
+    overflow: hidden;
+  }
+  .button #splash{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0px;
+    height: 0px;
+    background: rgba(255, 255, 255, .2);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: .5s ease-out;
+  }
+  

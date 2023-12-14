@@ -1,0 +1,235 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #68B984;
+    transition: background-color .5s;
+    position: relative;
+}
+hr{
+    width: 400px;
+}
+#board{
+    width: 400px;
+    height: 400px;
+    background-color: #CFFDE1;
+    border: 5px solid #3D5656;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tile{
+    height: 90px;
+    width: 90px;
+    border: 5px solid olive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:800;
+    font-size:xx-large;
+}
+h1{
+    text-align: center;
+    font-size:60px;
+    font-weight:900;
+    width: 200px;
+    margin: 0 auto;
+    background-color: #8EACCD;
+    border-radius: 10px;
+}
+h2{
+    text-align: center;
+}
+.x2{
+    color: white;
+    background-color: #6528F7;
+
+}
+.x4{
+    color: white;
+    background-color: #E49393;
+}
+.x8{
+    color: white;
+    background-color: #5FBDFF;
+}
+.x16{
+    color: white;
+    background-color: #D2DE32;
+}
+.x32{
+    color: white;
+    background-color: #A9AF7E;
+}
+.x64{
+    color: white;
+    background-color: #5C2E7E;
+}
+.x128{
+    color: white;
+    background-color: #FFD124;
+}
+.x256{
+    color: white;
+    background-color: #17D7A0;
+}
+.x512{
+    color: white;
+    background-color: #2B4865;
+}
+.x1024{
+    color: white;
+    background-color: #B958A5;
+}
+.x2048{
+    color: white;
+    background-color: #FF7676;
+}
+.x4096{
+    color: white;
+    background-color: rgb(98, 190, 98);
+}
+#game-over-popup {
+    display: none;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #fff;
+    font-family:'Times New Roman', Times, serif;
+    border-radius: 10px;
+    transition: 0.9s;
+}
+
+#game-over-popup h2 {
+    color: #ff0000;
+    font-size:xx-larges;
+}
+
+#game-over-popup button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.55s;
+    border-radius: 10px;
+}
+#won {
+    display: none;
+    position: fixed;
+    top: 56%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #fff;
+    font-family:'Times New Roman', Times, serif;
+    border-radius: 10px;
+    transition: 0.9s;
+}
+#won h2 {
+    color: #ff0000;
+    font-size:40px;
+}
+#won button {
+    padding: 10px ;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.55s;
+    border-radius: 10px;
+}
+.replay{
+    font-size:larger;
+    font-weight: bolder;
+}
+#muteIcon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 50px;
+}
+
+.sidenav {
+    height: 99%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center;
+    font-family: 'Graduate', serif;
+  }
+  
+  .sidenav p {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bolder;
+    color: #68B984;
+    display: block;
+    transition: 0.3s;
+    
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+img{
+    position: absolute;
+    top: 5%;
+    margin-left: 20px;
+    /* left: 2%; */
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  .me{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    /* margin-left: 60px; */
+    left: 14%;
+  }
+  .name{
+    margin-top: 60%;
+  }
+ .sidenav .mail{
+    margin-top: 10px;
+    font-size: 20px;
+    margin-left: -15px;
+ }
+ a{
+    position: absolute;
+    margin-left: -10%;
+    color: #fff;
+    /* background-color: #fff; */
+ }
+ .insta{
+    color: #fff;
+    background-color: #fff;
+    border-radius: 10px;
+ }
+.cancel{
+    position: relative;
+    top: 10px;
+}
