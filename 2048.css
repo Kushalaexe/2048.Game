@@ -3,9 +3,13 @@ body{
     background-color: #68B984;
     transition: background-color .5s;
     position: relative;
+    margin-right: 10px;
 }
 hr{
     width: 400px;
+}
+.material-symbols-outlined{
+    margin-left: 0px;
 }
 #board{
     width: 400px;
@@ -84,10 +88,7 @@ h2{
     color: white;
     background-color: #FF7676;
 }
-.x4096{
-    color: white;
-    background-color: rgb(98, 190, 98);
-}
+
 #game-over-popup {
     display: none;
     position: fixed;
@@ -150,16 +151,18 @@ h2{
     right: 20px;
     cursor: pointer;
     width: 50px;
+    margin-left: 0px;
 }
 
 .sidenav {
-    height: 99%;
+    height: 95%;
     width: 0;
     position: absolute;
+    border-radius: 10px;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #232D3F;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -168,7 +171,7 @@ h2{
   }
   
   .sidenav p {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 25px;
     text-decoration: none;
     font-size: 25px;
     font-weight: bolder;
@@ -198,6 +201,7 @@ img{
     height: 40px;
     width: 40px;
     cursor: pointer;
+    pointer-events:fill;
 }
 #main {
     transition: margin-left .5s;
@@ -232,4 +236,63 @@ img{
 .cancel{
     position: relative;
     top: 10px;
+}
+
+@media (max-width : 767px){
+    body{
+        position: relative;
+    }
+    #muteIcon{
+        position: absolute;
+        right: 1%;
+        top: 4%;
+    }
+   #board{
+    max-width: 315px;
+    border: 5px solid #3D5656;
+    max-height: 315px;
+    margin-top: 4rem ;
+    margin-left: -0.3rem;
+   }
+   hr{
+    width: 315px;
+   }
+   .tile{
+    width: 68.75px ;
+    height: 68.75px;
+    border: 5px solid olive;
+
+   }
+   h2{
+    margin-top: 3rem ;
+    margin-bottom: -1rem;
+    font-size: 1.6rem;
+   }
+   #score{
+    color: #0C134F;
+    font-weight:bolder;
+    font-size: xx-large;
+   }
+   .sidenav{
+    height: 39rem;
+    border-radius: 10px;
+    background-color: #232D3F;
+   }
+   .no-select{
+    user-select: none;
+   }
+   #won h2 {
+    color: #ff0000;
+    font-size:40px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+#won button {
+    padding: 10px ;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.55s;
+    border-radius: 10px;
+    margin-bottom: 0;
+}
 }
