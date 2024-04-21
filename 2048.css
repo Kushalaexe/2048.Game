@@ -1,90 +1,114 @@
-body{
+body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #68B984;
+    background-color: #68B984 !important;
     transition: background-color .5s;
     position: relative;
-    margin-right: 10px;
+
 }
-hr{
-    width: 400px;
-}
-.material-symbols-outlined{
+
+.material-symbols-outlined {
     margin-left: 0px;
 }
-#board{
+
+#board {
     width: 400px;
     height: 400px;
-    background-color: #CFFDE1;
+    background-color: #CFFDE1 !important;
     border: 5px solid #3D5656;
     border-radius: 5px;
-    margin: 0 auto;
+
+    margin-top: 2rem;
+
     display: flex;
     flex-wrap: wrap;
 }
-.tile{
+
+.tile {
     height: 90px;
     width: 90px;
     border: 5px solid olive;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight:800;
-    font-size:xx-large;
+    font-weight: 800;
+    font-size: xx-large;
 }
-h1{
+
+h1 {
     text-align: center;
-    font-size:60px;
-    font-weight:900;
-    width: 200px;
-    margin: 0 auto;
+    font-size: 60px !important;
+    font-weight: 900 !important;
+    width: 200px !important;
+    margin: auto;
+    /* margin: 0 auto !important; */
     background-color: #8EACCD;
     border-radius: 10px;
 }
-h2{
-    text-align: center;
+
+*,
+::after,
+::before {
+    box-sizing: content-box !important;
 }
-.x2{
+
+
+h2 {
+    text-align: center;
+    margin-top: 20px !important;
+}
+
+.x2 {
     color: white;
     background-color: #6528F7;
 
 }
-.x4{
+
+.x4 {
     color: white;
     background-color: #E49393;
 }
-.x8{
+
+.x8 {
     color: white;
     background-color: #5FBDFF;
 }
-.x16{
+
+.x16 {
     color: white;
     background-color: #D2DE32;
 }
-.x32{
+
+.x32 {
     color: white;
     background-color: #A9AF7E;
 }
-.x64{
+
+.x64 {
     color: white;
     background-color: #5C2E7E;
 }
-.x128{
+
+.x128 {
     color: white;
     background-color: #FFD124;
 }
-.x256{
+
+.x256 {
     color: white;
     background-color: #17D7A0;
 }
-.x512{
+
+.x512 {
     color: white;
     background-color: #2B4865;
 }
-.x1024{
+
+.x1024 {
     color: white;
     background-color: #B958A5;
 }
-.x2048{
+
+.x2048 {
     color: white;
     background-color: #FF7676;
 }
@@ -99,14 +123,14 @@ h2{
     transform: translate(-50%, -50%);
     text-align: center;
     background-color: #fff;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     border-radius: 10px;
     transition: 0.9s;
 }
 
 #game-over-popup h2 {
     color: #ff0000;
-    font-size:xx-larges;
+    font-size: xx-larges;
 }
 
 #game-over-popup button {
@@ -116,6 +140,7 @@ h2{
     transition: 0.55s;
     border-radius: 10px;
 }
+
 #won {
     display: none;
     position: fixed;
@@ -126,33 +151,29 @@ h2{
     transform: translate(-50%, -50%);
     text-align: center;
     background-color: #fff;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     border-radius: 10px;
     transition: 0.9s;
 }
+
 #won h2 {
     color: #ff0000;
-    font-size:40px;
+    font-size: 40px;
 }
+
 #won button {
-    padding: 10px ;
+    padding: 10px;
     font-size: 15px;
     cursor: pointer;
     transition: 0.55s;
     border-radius: 10px;
 }
-.replay{
-    font-size:larger;
+
+.replay {
+    font-size: larger;
     font-weight: bolder;
 }
-#muteIcon {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    width: 50px;
-    margin-left: 0px;
-}
+
 
 .sidenav {
     height: 95%;
@@ -168,9 +189,9 @@ h2{
     padding-top: 60px;
     text-align: center;
     font-family: 'Graduate', serif;
-  }
-  
-  .sidenav p {
+}
+
+.sidenav p {
     padding: 8px 8px 8px 25px;
     text-decoration: none;
     font-size: 25px;
@@ -178,22 +199,20 @@ h2{
     color: #68B984;
     display: block;
     transition: 0.3s;
-    
-  }
-  
-  .sidenav .closebtn {
+
+}
+
+.sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-img{
+}
+
+
+
+img {
     position: absolute;
     top: 5%;
     margin-left: 20px;
@@ -201,98 +220,88 @@ img{
     height: 40px;
     width: 40px;
     cursor: pointer;
-    pointer-events:fill;
+    pointer-events: fill;
 }
+
 #main {
     transition: margin-left .5s;
-    padding: 16px;
-  }
-  .me{
+    /* padding: 16px; */
+}
+
+.me {
     border-radius: 50%;
     height: 200px;
     width: 200px;
     /* margin-left: 60px; */
     left: 14%;
-  }
-  .name{
+}
+
+.name {
     margin-top: 60%;
-  }
- .sidenav .mail{
+}
+
+.sidenav .mail {
     margin-top: 10px;
     font-size: 20px;
     margin-left: -15px;
- }
- a{
+}
+
+a {
     position: absolute;
     margin-left: -10%;
     color: #fff;
     /* background-color: #fff; */
- }
- .insta{
+}
+
+.insta {
     color: #fff;
     background-color: #fff;
     border-radius: 10px;
- }
-.cancel{
+}
+
+.cancel {
     position: relative;
     top: 10px;
 }
 
-@media (max-width : 767px){
-    body{
-        position: relative;
-    }
-    #muteIcon{
-        position: absolute;
-        right: 1%;
-        top: 4%;
-    }
-   #board{
-    max-width: 315px;
-    border: 5px solid #3D5656;
-    max-height: 315px;
-    margin-top: 4rem ;
-    margin-left: -0.3rem;
-   }
-   hr{
-    width: 315px;
-   }
-   .tile{
-    width: 68.75px ;
-    height: 68.75px;
-    border: 5px solid olive;
+@media screen and (200px <=width <=576px) {
+    #board {
+        width: 90vw;
+        height: auto;
+        /* margin: 4rem auto !important; */
+        margin: 0 auto;
 
-   }
-   h2{
-    margin-top: 3rem ;
-    margin-bottom: -1rem;
-    font-size: 1.6rem;
-   }
-   #score{
-    color: #0C134F;
-    font-weight:bolder;
-    font-size: xx-large;
-   }
-   .sidenav{
-    height: 39rem;
-    border-radius: 10px;
-    background-color: #232D3F;
-   }
-   .no-select{
-    user-select: none;
-   }
-   #won h2 {
-    color: #ff0000;
-    font-size:40px;
-    margin-bottom: 30px;
-    margin-top: 20px;
-}
-#won button {
-    padding: 10px ;
-    font-size: 15px;
-    cursor: pointer;
-    transition: 0.55s;
-    border-radius: 10px;
-    margin-bottom: 0;
-}
+    }
+
+    .tile {
+        width: 21.87vw;
+        height: 21.87vw;
+        font-size: 7vw;
+    }
+
+    h1 {
+        font-size: 5rem !important;
+        margin-top: 10px !important;
+    }
+
+    h2 {
+        margin-top: 7rem !important;
+        margin-bottom: 1rem !important;
+        font-size: 2.5rem !important;
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box !important;
+    }
+
+    .sidenav {
+        padding-top: 15px;
+        /* height: fit-content; */
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
 }
