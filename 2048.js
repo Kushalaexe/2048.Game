@@ -7,17 +7,17 @@ window.onload = function () {
     setGame();
 
     const restartButton = document.getElementById('restartButton');
-    restartButton.addEventListener('click',function(){
-    resetGame();
+    restartButton.addEventListener('click', function () {
+        resetGame();
     })
 
-    const replayButton= document.getElementById('replayButton')
-    replayButton.addEventListener('click',function(){
-    document.addEventListener('keyup',KeyPress)
-    resetGame();
-    }) 
-    if(score<2048){
-        document.addEventListener('keyup',KeyPress)
+    const replayButton = document.getElementById('replayButton')
+    replayButton.addEventListener('click', function () {
+        document.addEventListener('keyup', KeyPress)
+        resetGame();
+    })
+    if (score < 2048) {
+        document.addEventListener('keyup', KeyPress)
     }
 }
 
@@ -50,9 +50,9 @@ function updateTile(tile, num) {
     tile.classList.add('tile');
     if (num > 0) {
         tile.innerText = num;
-        if (num == 2048){
+        if (num == 2048) {
             showWinPopup();
-            document.removeEventListener('keyup',KeyPress)
+            document.removeEventListener('keyup', KeyPress)
             disableTouchEvents();
         }
         else if (num <= 2048) {
@@ -65,20 +65,20 @@ function updateTile(tile, num) {
 
 
 //To use slide events 
-function KeyPress (e) {
+function KeyPress(e) {
     if (e.code == "ArrowLeft") {
         if (slideLeft()) {
             showGameOverPopup();
         }
-      
-        else  {
+
+        else {
             setTwo();
         }
     } else if (e.code == "ArrowRight") {
         if (slideRight()) {
             showGameOverPopup();
-        } 
-       
+        }
+
         else {
             setTwo();
         }
@@ -86,7 +86,7 @@ function KeyPress (e) {
         if (slideUp()) {
             showGameOverPopup();
         }
-      
+
         else {
             setTwo();
         }
@@ -94,7 +94,7 @@ function KeyPress (e) {
         if (slideDown()) {
             showGameOverPopup();
         }
-       else {
+        else {
             setTwo();
         }
     }
@@ -215,14 +215,14 @@ function setTwo() {
             tile.innerText = '2';
             tile.classList.add('x2');
             found = true;
-            
+
         }
     }
 }
 
-function showWinPopup(){
+function showWinPopup() {
     const won = document.getElementById('won')
-    won.style.display='block'
+    won.style.display = 'block'
     gameWon = true
 
 }
@@ -294,36 +294,36 @@ function canMoveDown() {
 // Reset game 
 function resetGame() {
     clearBoard();
-    score=0
+    score = 0
     setGame2();
     hideGameOverPopup();
     hideWinGame();
 
     gameWon = false
 
-   const swipeElement = document.getElementById('board')
-   swipeElement = document.addEventListener('touchstart',handleTouchStart,false)
-   swipeElement = document.addEventListener('touchmove',handleTouchMove,false)
-   swipeElement = document.addEventListener('touchend',handleTouchEnd,false)
-   
+    const swipeElement = document.getElementById('board')
+    swipeElement = document.addEventListener('touchstart', handleTouchStart, false)
+    swipeElement = document.addEventListener('touchmove', handleTouchMove, false)
+    swipeElement = document.addEventListener('touchend', handleTouchEnd, false)
+
 }
 
 //Clear the board
-function clearBoard(){
-    for (let r=0;r<row;r++){
-        for(let c=0;c<columns;c++){
-            let tile=document.getElementById(r.toString()+"-"+c.toString())
-            tile.innerText=''
-            tile.classList=''
+function clearBoard() {
+    for (let r = 0; r < row; r++) {
+        for (let c = 0; c < columns; c++) {
+            let tile = document.getElementById(r.toString() + "-" + c.toString())
+            tile.innerText = ''
+            tile.classList = ''
             tile.classList.add('tile')
         }
     }
 }
 
 // Hide Won Popup
-function hideWinGame(){
+function hideWinGame() {
     const gameWin = document.getElementById('won');
-    gameWin.style.display= 'none'
+    gameWin.style.display = 'none'
 }
 
 // Hide gameOver popup
@@ -333,43 +333,31 @@ function hideGameOverPopup() {
 }
 
 // Set the board after restarting game or once clicked the replay button
-function setGame2(){
+function setGame2() {
     board = [
-        [0,0,0,0],
-        [0,0,0,0],
-        [0,0,0,0],
-        [0,0,0,0]
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0]
     ]
     setTwo()
     setTwo()
 }
 
-// Music
-const backgroundMusic=document.getElementById('backgroundMusic')
-function toggleMute(){
-   
-    backgroundMusic.muted = !backgroundMusic.muted;
-    if(backgroundMusic.muted){
-        
-        document.getElementById('muteIcon').src='mute-copy.png'
-    }
-    else{
-        document.getElementById('muteIcon').src='volume-high-solid-copy.png'
-    }
-}
 
 // NavBar
 function openNav() {
-    document.getElementById("mySidenav").style.width = "347px";
-    document.getElementById("main").style.marginLeft="350px";
-    document.body.style.backgroundColor="rgba(0,0,0,0.4)";
-  }
-  
-  function closeNav() {
+    document.getElementById("mySidenav").setAttribute("style", "width: 347px !important;");
+    document.getElementById("main").setAttribute("style", "margin-left: 350px !important;");
+    document.body.setAttribute("style", "background-color: rgba(0,0,0,0.4) !important;");
+
+}
+
+function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-    document.getElementById('main').style.marginLeft='0';
-    document.body.style.backgroundColor="#68B984";
-  }
+    document.getElementById('main').style.marginLeft = '0';
+    document.body.style.backgroundColor = "#68B984";
+}
 
 
 //Events For Mobile 
@@ -382,31 +370,31 @@ swipeElement.addEventListener('touchmove', handleTouchMove, false);
 swipeElement.addEventListener('touchend', handleTouchEnd, false);
 
 function handleTouchStart(event) {
-        if(gameWon){
-            return
-        }
-        touchStartX = event.touches[0].clientX;
-        touchStartY = event.touches[0].clientY;
+    if (gameWon) {
+        return
     }
+    touchStartX = event.touches[0].clientX;
+    touchStartY = event.touches[0].clientY;
+}
 
 function handleTouchMove(event) {
-        if(gameWon){
-            return
-        }
-        // Prevent scrolling
-        event.preventDefault();
+    if (gameWon) {
+        return
     }
+    // Prevent scrolling
+    event.preventDefault();
+}
 
 
 function handleTouchEnd(event) {
-        if(gameWon){
-            return
-        }
-        touchEndX = event.changedTouches[0].clientX;
-        touchEndY = event.changedTouches[0].clientY;
-
-        handleSwipe();
+    if (gameWon) {
+        return
     }
+    touchEndX = event.changedTouches[0].clientX;
+    touchEndY = event.changedTouches[0].clientY;
+
+    handleSwipe();
+}
 
 
 const sensitivity = 50;
@@ -440,7 +428,7 @@ function handleSwipe() {
             } else {
                 setTwo();
             }
-        } else if(deltaY< - sensitivity){
+        } else if (deltaY < - sensitivity) {
             // Swipe up
             if (slideUp()) {
                 showGameOverPopup();
