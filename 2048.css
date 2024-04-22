@@ -17,7 +17,7 @@ body {
     border: 5px solid #3D5656;
     border-radius: 5px;
 
-    margin-top: 2rem;
+    margin: 0 auto;
 
     display: flex;
     flex-wrap: wrap;
@@ -264,7 +264,7 @@ a {
     top: 10px;
 }
 
-@media screen and (200px <=width <=576px) {
+@media screen and (200px <= width <=576px) {
     #board {
         width: 90vw;
         height: auto;
@@ -274,8 +274,8 @@ a {
     }
 
     .tile {
-        width: 21.87vw;
-        height: 21.87vw;
+        width: 21.8vw;
+        height: 21.8vw;
         font-size: 7vw;
     }
 
