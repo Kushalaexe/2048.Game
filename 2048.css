@@ -264,9 +264,9 @@ a {
     top: 10px;
 }
 
-@media screen and (200px <= width <=576px) {
+@media screen and (  width <=576px) {
     #board {
-        width: 90vw;
+        width: 89.99vw;
         height: auto;
         /* margin: 4rem auto !important; */
         margin: 0 auto;
@@ -274,14 +274,16 @@ a {
     }
 
     .tile {
-        width: 21.8vw;
+        width: 21.89vw;
         height: 21.8vw;
         font-size: 7vw;
+        
     }
 
     h1 {
         font-size: 5rem !important;
-        margin-top: 10px !important;
+        margin-top: 25px !important;
+       
     }
 
     h2 {
@@ -303,5 +305,108 @@ a {
 
     .sidenav a {
         font-size: 18px;
+    }
+    h3{
+        font-size: 22px !important;
+    }
+    #game-over-popup {
+        top: 60%;
+    }
+    
+    #game-over-popup h2 {
+        color: #ff0000;
+    font-size: xx-large !important;
+    margin: 15px auto !important;
+    }
+    
+    #game-over-popup button {
+        padding: 10px 20px;
+        font-size: 18px ;
+        cursor: pointer;
+        transition: 0.55s;
+        border-radius: 10px;
+        margin: 20px auto !important;
+    }
+    #won{
+        /* margin: 10px auto !important; */
+        top: 60%;
+    }
+    #won h2 {
+        color: #ff0000;
+        font-size: 40px;
+        margin: 20px auto !important;
+    }
+    
+    #won button {
+        padding: 8px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.55s;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+}
+@media screen and ( width <=409px){
+    #board {
+        width: 90vw;
+        height: auto;
+        /* margin: 4rem auto !important; */
+        margin: 0 auto;
+
+    }
+
+    .tile {
+        width: 21.8vw;
+        height: 21.8vw;
+        font-size: 7vw;
+        
+    }
+
+    h1 {
+        font-size: 5rem !important;
+        margin-top: 25px !important;
+    }
+
+    h2 {
+        margin-top: 7rem !important;
+        margin-bottom: 1rem !important;
+        font-size: 2.5rem !important;
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box !important;
+    }
+
+    .sidenav {
+        padding-top: 15px;
+        /* height: fit-content; */
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+    #game-over-popup{
+        top: 66%;
+        width: 180px;
+        height: 180px;
+    }
+    #game-over-popup h2 {
+        color: #ff0000;
+    font-size: xx-large !important;
+    margin: 15px auto !important;
+    }
+    
+    #game-over-popup button {
+        padding: 10px 20px;
+        font-size: 16px ;
+        cursor: pointer;
+        transition: 0.55s;
+        border-radius: 10px;
+        margin: 10px auto !important;
+    }
+    #won{
+        top: 66%;
     }
 }
