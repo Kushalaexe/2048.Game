@@ -266,22 +266,22 @@ a {
 
 
 
-.row>*{
-    padding: 1px !important;
-}
+
 @media  (max-width :576px) {
     #board {
         width: 90vw !important;
         height: auto;
         /* margin: 4rem auto !important; */
         margin: 0 auto;
+        padding: 1px !important;
 
     }
 
     .tile {
-        width: 21.66vw !important;
-        height: 21.66vw;
+        width: 21.6vw !important;
+        height: 21vw;
         font-size: 7vw;
+        
 
     }
 
